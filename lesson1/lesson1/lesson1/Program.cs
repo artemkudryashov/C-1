@@ -10,21 +10,20 @@ namespace lesson1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите имя:");
-            var name = Console.ReadLine();
-            Console.WriteLine("Введите фамилию:");
-            var family = Console.ReadLine();
-            Console.WriteLine("Введите возраст:");
-            var age = Console.ReadLine();
-            Console.WriteLine("Введите рост:");
-            var height = Console.ReadLine();
-            Console.WriteLine("Введите вес:");
-            var weight = Console.ReadLine();
+            
+            //Ввести вес и рост человека. Рассчитать и вывести индекс массы тела (ИМТ) по формуле I=m/(h*h); где m — масса тела в килограммах, h — рост в метрах.
 
-            // используя  склеивание: //Console.WriteLine("«Анкета» \nИмя: " + name+"\n"+"Фамилия: "+family+"\n"+"Возраст: "+age+"\n"+"Рост: "+height+"\n"+"Вес: "+weight);
-            // используя форматированный вывод: //Console.WriteLine("«Анкета» \nИмя: {0}\nФамилия: {1}\nВозраст: {2}\nРост: {3}\nВес: {4}",name,family,age,height,weight);
-            // используя вывод со знаком $:
-            Console.WriteLine($"«Анкета» \nИмя: {name}\nФамилия: {family}\nВозраст: {age}\nРост: {height}\nВес: {weight}");
+            Console.WriteLine("Введите вес(кг):");
+            double weight = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите рост(см):");
+            double h = double.Parse(Console.ReadLine());
+
+            double height = h / 100;
+
+            int IMT = Convert.ToInt32(weight / (height * height));
+
+            Console.WriteLine($"Ваш индекс массы тела: {IMT}");
+
         }
     }
 }
