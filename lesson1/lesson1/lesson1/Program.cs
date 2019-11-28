@@ -10,19 +10,20 @@ namespace lesson1
     {
         static void Main(string[] args)
         {
-            
-            //Ввести вес и рост человека. Рассчитать и вывести индекс массы тела (ИМТ) по формуле I=m/(h*h); где m — масса тела в килограммах, h — рост в метрах.
 
-            Console.WriteLine("Введите вес(кг):");
-            double weight = double.Parse(Console.ReadLine());
-            Console.WriteLine("Введите рост(см):");
-            double h = double.Parse(Console.ReadLine());
+            //а) Написать программу, которая подсчитывает расстояние между точками с координатами x1, y1 и x2,y2 по формуле r=Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2). Вывести результат, используя спецификатор формата .2f (с двумя знаками после запятой);
+            int x1, y1, x2, y2;
+            Console.WriteLine("Введите координату X1:");
+            x1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату Y1:");
+            y1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату X2:");
+            x2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату Y1:");
+            y2 = int.Parse(Console.ReadLine());
 
-            double height = h / 100;
-
-            int IMT = Convert.ToInt32(weight / (height * height));
-
-            Console.WriteLine($"Ваш индекс массы тела: {IMT}");
+            double result = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine("Расстояние между точками: {0:F2}", result);
 
         }
     }
