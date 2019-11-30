@@ -10,21 +10,21 @@ namespace lesson1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите имя:");
-            var name = Console.ReadLine();
-            Console.WriteLine("Введите фамилию:");
-            var family = Console.ReadLine();
-            Console.WriteLine("Введите возраст:");
-            var age = Console.ReadLine();
-            Console.WriteLine("Введите рост:");
-            var height = Console.ReadLine();
-            Console.WriteLine("Введите вес:");
-            var weight = Console.ReadLine();
 
-            // используя  склеивание: //Console.WriteLine("«Анкета» \nИмя: " + name+"\n"+"Фамилия: "+family+"\n"+"Возраст: "+age+"\n"+"Рост: "+height+"\n"+"Вес: "+weight);
-            // используя форматированный вывод: //Console.WriteLine("«Анкета» \nИмя: {0}\nФамилия: {1}\nВозраст: {2}\nРост: {3}\nВес: {4}",name,family,age,height,weight);
-            // используя вывод со знаком $:
-            Console.WriteLine($"«Анкета» \nИмя: {name}\nФамилия: {family}\nВозраст: {age}\nРост: {height}\nВес: {weight}");
+            //а) Написать программу, которая подсчитывает расстояние между точками с координатами x1, y1 и x2,y2 по формуле r=Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2). Вывести результат, используя спецификатор формата .2f (с двумя знаками после запятой);
+            int x1, y1, x2, y2;
+            Console.WriteLine("Введите координату X1:");
+            x1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату Y1:");
+            y1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату X2:");
+            x2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите координату Y1:");
+            y2 = int.Parse(Console.ReadLine());
+
+            double result = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine("Расстояние между точками: {0:F2}", result);
+
         }
     }
 }
